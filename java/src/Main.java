@@ -13,10 +13,10 @@ public class Main {
 
         String filepath = "NCHS_-_Leading_Causes_of_Death__United_States.csv";
 
-        String inpurText = "55.50";
+        String inpurText = "";
         Scanner scanner = new Scanner(System.in);
 
-        inpurText = scanner.next();
+        inpurText = scanner.nextLine();
 
 
         Reader inputFile  = new FileReader(filepath);
@@ -34,7 +34,8 @@ public class Main {
                         ||record.get(4).toLowerCase().trim().equals(inpurText.toLowerCase().trim())
                         ||record.get(5).toLowerCase().trim().equals(inpurText.toLowerCase().trim()))
                 {
-                    System.out.println(record.get(0)+" "+record.get(1)+" "+record.get(2)+" "+record.get(3)+" "+record.get(4)+" "+record.get(5));
+                    System.out.println(record.get(0)+" "+record.get(1)+" "+record.get(2)
+                            +" "+record.get(3)+" "+record.get(4)+" "+record.get(5));
                 }
             }
 
